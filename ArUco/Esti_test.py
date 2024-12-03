@@ -22,8 +22,10 @@ else:
     # パラメータの設定
     parameters = aruco.DetectorParameters()
 
+    detector = aruco.ArucoDetector(aruco_dict, parameters)
+
     # マーカーの検出
-    corners, ids, rejectedImgPoints = aruco.ArucoDetector.detectMarkers(gray, aruco_dict, parameters=parameters)
+    corners, ids, rejectedImgPoints =  detector.detectMarkers(imag)
 
     # 検出結果の表示
     print("Corners:", corners)

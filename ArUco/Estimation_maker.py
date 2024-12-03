@@ -32,6 +32,9 @@ def recognizeArMarker(dictionary_name, input_img):
 
 		# ArUcoマーカの検出結果をファイル出力
 		cv2.imwrite(output_file_nm, ar_image)
+	
+
+
 
 if __name__ == "__main__":
     recognizeArMarker()
