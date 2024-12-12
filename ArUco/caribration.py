@@ -63,8 +63,8 @@ print("calculating camera parameter...")
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
 # 計算結果を保存
-np.save("mtx", mtx) # カメラ行列
-np.save("dist", dist.ravel()) # 歪みパラメータ
+np.save("ArUco\CameraPalams\mtx", mtx) # カメラ行列
+np.save("ArUco\CameraPalams\dist", dist.ravel()) # 歪みパラメータ
 # 計算結果を表示
 print("RMS = ", ret)
 print("mtx = \n", mtx)
